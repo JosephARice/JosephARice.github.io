@@ -11,257 +11,45 @@
 // In practice you'll probably get this from a service
 // see http://adaptivecards.io/samples/ for inspiration
 var card = {
-	"$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-	"type": "AdaptiveCard",
-	"version": "1.3",
-	"body": [
-		{
-			"type": "ColumnSet",
-			"columns": [
-				{
-					"type": "Column",
-					"width": "800px",
-					"horizontalAlignment": "Center",
-					"items": [
-						{
-							"type": "Media",
-							"poster": "https://www.soapui.org/soapui/media/images/TestServer/write-it-test-it.png",
-							"altText": "Document the service interface in Swagger OASv2 video",
-							"sources": [
-								{
-									"horizontalAlignment": "Center",
-									"mimeType": "video/mp4",
-									"spacing": "medium",
-									"url": "https://www.youtube.com/watch?v=k1MPIHAVU3k"
-								}
-							]
-						},
-						
-						{
-							"type": "ColumnSet",
-							"spacing": "medium",
-							"columns": [
-								{
-									"type": "Column",
-									"width": "stretch",
-									"items": [
-										{
-											"type": "ActionSet",
-											"horizontalAlignment": "Center",
-											"actions": [
-												{
-													"type": "Action.Submit",
-													"title": "<<",
-													"associatedInputs": "none",
-													"data": {
-														"button": "decisionHome"
-													}
-												}
-											]
-										}
-									]
-								},
-								{
-									"type": "Column",
-									"width": "stretch",
-									"items": [
-										{
-											"type": "ActionSet",
-											"horizontalAlignment": "Center",
-											"actions": [
-												{
-													"type": "Action.Submit",
-													"title": "<",
-													"associatedInputs": "none",
-													"data": {
-														"button": "decisionBack"
-													}
-												}
-											]
-										}
-									]
-								},
-								{
-									"type": "Column",
-									"width": "stretch",
-									"items": [
-										{
-											"type": "ActionSet",
-											"horizontalAlignment": "Center",
-											"actions": [
-												{
-													"type": "Action.Submit",
-													"title": ">",
-													"associatedInputs": "none",
-													"data": {
-														"button": "decisionNext"
-													}
-												}
-											]
-										}
-									]
-								},
-								{
-									"type": "Column",
-									"width": "stretch",
-									"items": [
-										{
-											"type": "ActionSet",
-											"horizontalAlignment": "Center",
-											"actions": [
-												{
-													"type": "Action.Submit",
-													"title": "?",
-													"associatedInputs": "none",
-													"data": {
-														"button": "decisionHelp"
-													}
-												}
-											]
-										}
-									]
-								}
-							]
-						}
-					]
-				},
-				{
-					"type": "Column",
-					"width": "125px",
-					"items": [
-						{
-							"type": "Image",
-							"url": "https://wikijs.kong.ms3-inc.com/Integrate/patterns",
-							"horizontalAlignment": "center",
-							"label": "Intake Form Thumbnail",
-							"height": "70px",
-							"width": "125px",
-							"spacing": "padding",
-							"style": "default",
-							"selectAction": {
-								"type": "Action.Submit",
-								"title": "Return to APIm Intake Form",
-								"associatedInputs": "none",
-								"data": {
-									"button": "decision_img"
-								}
-							}
-						},
-						{
-							"type": "Image",
-							"url": "https://wikijs.kong.ms3-inc.com/Integrate/patterns",
-							"horizontalAlignment": "center",
-							"label": "API Intro Thumbnail",
-							"height": "70px",
-							"width": "125px",
-							"spacing": "padding",
-							"style": "default",
-							"selectAction": {
-								"type": "Action.Submit",
-								"title": "Learn how to build APIs",
-								"associatedInputs": "none",
-								"data": {
-									"button": "playground_img"
-								}
-							}
-						},
-						{
-							"type": "Image",
-							"url": "https://wikijs.kong.ms3-inc.com/Integrate/patterns",
-							"horizontalAlignment": "center",
-							"label": "RASA Thumbnail",
-							"height": "70px",
-							"width": "125px",
-							"spacing": "padding",
-							"style": "default",
-							"selectAction": {
-								"type": "Action.Submit",
-								"title": "Create Recipe Aligned API",
-								"associatedInputs": "none",
-								"data": {
-									"button": "rasa_img"
-								}
-							}
-						},
-
-						{
-							"type": "Image",
-							"url": "https://wikijs.kong.ms3-inc.com/Integrate/patterns2",
-							"horizontalAlignment": "center",
-							"label": "Govern API Image",
-							"spacing": "padding",
-							"height": "70px",
-							"width": "125px",
-							"style": "default",
-							"selectAction": {
-								"type": "Action.Submit",
-								"title": "Submit your API for Governance Review",
-								"associatedInputs": "none",
-								"data": {
-									"button": "govern_img"
-								}
-							}
-						},
-
-						{
-							"type": "Image",
-							"url": "https://wikijs.kong.ms3-inc.com/Integrate/patterns",
-							"horizontalAlignment": "center",
-							"label": "Test API Image",
-							"spacing": "padding",
-							"height": "70px",
-							"width": "125px",
-							"style": "default",
-							"selectAction": {
-								"type": "Action.Submit",
-								"title": "Certify your API",
-								"associatedInputs": "none",
-								"data": {
-									"button": "test_img"
-								}
-							}
-						},
-						{
-							"type": "Image",
-							"url": "https://wikijs.kong.ms3-inc.com/Integrate/patterns",
-							"horizontalAlignment": "center",
-							"label": "Deploy API",
-							"spacing": "padding",
-							"height": "70px",
-							"width": "125px",
-							"style": "default",
-							"selectAction": {
-								"type": "Action.Submit",
-								"title": "Learn more about deploying your API to UAT/PROD",
-								"associatedInputs": "none",
-								"data": {
-									"button": "deploy_api_img"
-								}
-							}
-						},
-						{
-							"type": "Image",
-							"url": "https://wikijs.kong.ms3-inc.com/Integrate/patterns",
-							"horizontalAlignment": "center",
-							"label": "Subscribe to API Thumbnail",
-							"height": "70px",
-							"width": "125px",
-							"style": "default",
-							"spacing": "padding",
-							"selectAction": {
-								"type": "Action.Submit",
-								"title": "Learn how to subscribe to an existing API",
-								"associatedInputs": "none",
-								"data": {
-									"button": "subscribe_img"
-								}
-							}
-						}
-					]
-				}
-			]
-		}
-	]
+    "type": "AdaptiveCard",
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.3",
+    "body": [
+        {
+            "type": "Input.Text",
+            "placeholder": "Your family name...",
+            "label": "Family Name",
+            "id": "familyname"
+        },
+        {
+            "type": "Input.Text",
+            "placeholder": "Placeholder text",
+            "label": "Your first name...",
+            "id": "firstname"
+        },
+        {
+            "type": "Input.Date",
+            "label": "Date of birth"
+        },
+        {
+            "type": "Input.Text",
+            "label": "Your Email",
+            "placeholder": "email@domain.com",
+            "id": "email"
+        },
+        {
+            "type": "Input.Text",
+            "placeholder": "Placeholder text",
+            "label": "Password",
+            "id": "pwd"
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "Sign Up"
+        }
+    ]
 }
 ;
 
